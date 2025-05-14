@@ -1,4 +1,8 @@
 from django.shortcuts import render
 
 def home(request):
-    return render(request, 'home.html')
+     context = {
+        'messaggio': 'Benvenuto nella homepage!'
+    }
+
+    return render(request, 'home.html', context)
